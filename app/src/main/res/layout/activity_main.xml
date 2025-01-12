@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d6e2ea"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <app.rive.runtime.kotlin.RiveAnimationView
+        android:id="@+id/login_animation_view"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="-30dp"
+        app:riveResource="@raw/animated_login_character" />
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:backgroundTint="#F4F0F0"
+        android:textColor="@color/black"
+        android:textColorHint="#989797"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/searchcustom"
+        android:hint="Enter Your Email"
+        android:paddingLeft="10dp"
+        android:inputType="textEmailAddress"/>
+    <EditText
+        android:id="@+id/edt_Password"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="25dp"
+        android:backgroundTint="#F4F0F0"
+        android:layout_marginRight="25dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:textColorHint="#989797"
+        android:background="@drawable/searchcustom"
+        android:hint="Enter Your Password"
+        android:paddingLeft="10dp"
+        android:inputType="textPassword"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Login"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/btn"/>
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:indeterminateTint="#b04863" />
+
+
+
+</LinearLayout>
