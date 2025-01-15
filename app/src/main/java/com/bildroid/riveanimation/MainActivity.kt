@@ -7,6 +7,7 @@ import android.text.TextWatcher
 import android.view.View
 import android.widget.EditText
 import android.widget.ProgressBar
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -115,10 +116,12 @@ class MainActivity : AppCompatActivity() {
                 if (edt_email.text!!.isNotEmpty() && edt_password.text!!.isNotEmpty() && edt_email.text.toString() == "bilalrana2003@gmail.com" && edt_password.text.toString() == "admin") {
                     // Trigger success animation state
                     login_animation_view.controller.fireState(stateMachineName, "trigSuccess")
+                    Toast.makeText(this, "Successfully Logged in!", Toast.LENGTH_SHORT).show()
                     progressBar.visibility = View.GONE
                 } else {
                     // Trigger failure animation state
                     login_animation_view.controller.fireState(stateMachineName, "trigFail")
+                    Toast.makeText(this, "Wrong Email or Password!", Toast.LENGTH_SHORT).show()
                     progressBar.visibility = View.GONE
                 }
             },2000)
